@@ -45,7 +45,6 @@
 - (void)dealloc
 {
     self.dataRows = nil;
-    [super dealloc];
 }
 
 
@@ -103,7 +102,7 @@
    // Dequeue or create a cell of the appropriate type.
     UITableViewCell *cell = [tableView_ dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
 
     }
 	//if you want to add an image to your cell, here's how
